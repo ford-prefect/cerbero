@@ -31,8 +31,11 @@ class Recipe(custom.GStreamerStatic):
     gstreamer_version = '1.0'
     stype = SourceType.GIT
     licenses = [License.BSD_like]
-    remotes = { 'origin': 'https://github.com/EricssonResearch/openwebrtc-gst-plugins.git' }
-    commit = 'origin/master'
+    remotes = {
+        'origin': 'https://github.com/EricssonResearch/openwebrtc-gst-plugins.git',
+        'arun': 'https://github.com/ford-prefect/openwebrtc-gst-plugins.git'
+    }
+    commit = 'arun/scream'
     autoreconf = True
     autoreconf_sh = 'mkdir -p m4 && autoreconf -fiv'
     deps = ['gettext', 'gstreamer-1.0', 'gst-plugins-base-1.0',
